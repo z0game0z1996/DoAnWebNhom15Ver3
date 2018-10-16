@@ -12,14 +12,20 @@ require "db.php";
 
 	$hinhanh = $_FILES["fileUpload"]["name"];
 	echo $hinhanh;
-	$target_dir = "images/";
+	$target_dir = "../images/";
 	$target_file = $target_dir . basename($_FILES["fileUpload"]["name"]);
-
+	$imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
+	$uploadOk = 1;
 	echo $idloai.$idhsx;
 	$id = $_POST['id'];
 /*	suasanpham($tensp,$idloai, $idhsx,  $mota, $giasp, $hinhanh, $id)*/
 	if($db->suasanpham($tensp,$idloai,$idhsx,$mota,$giasp,$hinhanh,$id)){
-		if(move_uploaded_file($_FILES["fileUpload"]["tmp_name"], $target_file)){
+		if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg"
+		&& $imageFileType != "gif" ) {
+    		echo "Sorry, only JPG, JPEG, PNG & GIF files are allowed.";
+    		$uploadOk = 0;
+		}
+		elseif(move_uploaded_file($_FILES["fileUpload"]["tmp_name"], $target_file)){
 			echo "upload thanh cong"; 
 			header('location:index.php');
 		}
