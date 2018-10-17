@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.7.4
+-- version 4.7.9
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1:3306
--- Thời gian đã tạo: Th5 17, 2018 lúc 01:52 PM
--- Phiên bản máy phục vụ: 5.7.19
--- Phiên bản PHP: 5.6.31
+-- Thời gian đã tạo: Th10 17, 2018 lúc 09:45 AM
+-- Phiên bản máy phục vụ: 5.7.21
+-- Phiên bản PHP: 5.6.35
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -19,7 +19,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Cơ sở dữ liệu: `phanminhtri`
+-- Cơ sở dữ liệu: `mobile`
 --
 
 -- --------------------------------------------------------
@@ -33,7 +33,7 @@ CREATE TABLE IF NOT EXISTS `hsx` (
   `IDHSX` int(11) NOT NULL AUTO_INCREMENT,
   `TenHSX` varchar(200) COLLATE utf8_unicode_ci NOT NULL,
   PRIMARY KEY (`IDHSX`)
-) ENGINE=MyISAM AUTO_INCREMENT=27 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=28 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Đang đổ dữ liệu cho bảng `hsx`
@@ -85,7 +85,7 @@ CREATE TABLE IF NOT EXISTS `sanpham` (
   `IDLoai` int(11) NOT NULL,
   `IDHSX` int(11) NOT NULL,
   PRIMARY KEY (`ID`)
-) ENGINE=MyISAM AUTO_INCREMENT=25 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=28 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Đang đổ dữ liệu cho bảng `sanpham`
@@ -103,7 +103,7 @@ INSERT INTO `sanpham` (`ID`, `TenSP`, `GiaSP`, `HinhAnh`, `MoTa`, `IDLoai`, `IDH
 (8, 'Máy tính bảng Samsung Galaxy Tab A 8.0 (2017)', 6490000, 'tablet-samsung.png', 'Samsung Galaxy Tab A 8.0 (2017) mới có màn hình tỉ lệ 4:3 với không gian hiển thị rộng thông minh cho người dùng.\r\n\r\nMàn hình rộng hiển thị thông tin trọn vẹn\r\n\r\nVới cách bố trí chiều ngang và dọc theo tỉ lệ 4:3 thông minh, những thông tin bạn đọc trên một trang web hay tài liệu được hiển thị nhiều và trọn vẹn trong một khung hình hơn.\r\n\r\nMáy sử dụng công nghệ hiển thị PLS TFT, độ phân giải 1280 x 800 pixels cho hình ảnh hiển thị chi tiết, giúp bạn thoải mái lướt web hay xem phim phụ đề may không mỏi mắt.', 2, 2),
 (9, 'Máy tính bảng Samsung Galaxy Tab A6 7.0', 3590000, 'dt-samsung.png', 'Samsung Galaxy Tab A 7.0 với thiết kế vẫn mang vẻ truyền thống và cấu hình tốt, khả năng hiển thị cải thiện, cùng kết nối 4G.\r\n\r\nThiết kế truyền thống, sang trọng\r\n\r\nChiếc tablet này được thay đổi đôi chút so với người tiền nhiệm là Tab A 8.0 với cạnh viền được bo thêm 1 đường cong nhô lên, tạo điểm nhấn khác biệt.', 2, 2),
 (10, 'Máy tính bảng Samsung Galaxy Book 10.6 inch', 19990000, 'mt-samsung.png', 'Đặc điểm nổi bật của Samsung Galaxy Book 10.6 inch\r\n\r\n\r\nTìm hiểu thêm\r\nTìm hiểu thêm\r\nBộ sản phẩm chuẩn: Adapter, Sách hướng dẫn, Bàn phím, Bút cảm ứng, Hộp máy\r\nSamsung Galaxy Book 10.6 inch là mẫu tablet 2 trong 1 chạy trên nền tảng Windows 10 nhưng vẫn sở hữu cho mình cây bút Spen thần thánh.\r\n\r\nThiết kế quen thuộc\r\n\r\nNhìn từ bên ngoài thì chiếc Samsung Galaxy Book không có quá nhiều sự khác biệt so với các tablet 2 trong 1 đang có mặt trên thị trường. Máy được gia công khá tốt, các chi tiết được hoàn thiện với độ chính xác cao.', 2, 2),
-(24, 'Điệ thoại Oppo R7', 9000000, 'oppo-r7-plus-detail-400x533.png', 'Màn hình:	AMOLED, 5\", AMOLED 16 triệu màu\r\nHệ điều hành:	Android 5.1 (Lollipop)\r\nCamera sau:	13 MP\r\nCamera trước:	8 MP\r\nCPU:	Snapdragon 615 8 nhân 64-bit\r\nRAM:	2 GB\r\nBộ nhớ trong:	16 GB\r\nThẻ SIM:\r\nNano SIM & Micro SIM, Hỗ trợ 4G', 1, 4),
+(24, 'Điện thoại Oppo R7', 9000000, 'Chrysanthemum.jpg', 'Màn hình:	AMOLED, 5\", AMOLED 16 triệu màu\r\nHệ điều hành:	Android 5.1 (Lollipop)\r\nCamera sau:	13 MP\r\nCamera trước:	8 MP\r\nCPU:	Snapdragon 615 8 nhân 64-bit\r\nRAM:	2 GB\r\nBộ nhớ trong:	16 GB\r\nThẻ SIM:\r\nNano SIM & Micro SIM, Hỗ trợ 4G', 1, 4),
 (11, 'Điện thoại Asus Zenfone 4 Max Pro ZC554KL', 4990000, 'dt-asus-2.png', 'Asus ZenFone 4 Max Pro là sản phẩm có mức giá rẻ nhất được Asus giới thiệu trong sự kiện vào tháng 8 vừa rồi, ưu điểm lớn nhất của máy chính là viên pin dung lượng khủng cùng bộ đôi camera kép ấn tượng.\r\n\r\nThiết kế quen thuộc\r\n\r\nZenFone 4 Max Pro sở hữu thiết kế khá quen thuộc của Asus với các góc cạnh được bo tròn cho cảm giác thoải mái khi cầm nắm, đặc biệt không có cảm giác trơn trượt khi cầm tay và không sợ dính dấu vân tay', 1, 5),
 (12, 'Điện thoại Asus Zenfone Live ZB501KL', 2990000, 'dt-asus.jpg', 'Vào tháng 2, Asus chính thức giới thiệu chiếc Zenfone Live với  thiết kế sang trẻ trung cùng nhiều tính năng hấp dẫn ở camera trước phục vụ nhu cầu live stream ngày càng nhiều trên facebook.', 1, 5),
 (13, 'Máy tính bảng Asus Zenfone Go ZB690KG', 2990000, 'tablet-asus.jpg', 'Vào tháng 2, Asus chính thức giới thiệu chiếc Zenfone Live với  thiết kế sang trẻ trung cùng nhiều tính năng hấp dẫn ở camera trước phục vụ nhu cầu live stream ngày càng nhiều trên facebook.', 2, 5),
@@ -114,7 +114,9 @@ INSERT INTO `sanpham` (`ID`, `TenSP`, `GiaSP`, `HinhAnh`, `MoTa`, `IDLoai`, `IDH
 (18, 'Laptop Lenovo IdeaPad 110 15IBR N3710/4GB/500GB/Win10/(80T700BKVN)', 6990000, 'laptop-lenovo.jpg', 'Lenovo IdeaPad 110 15IBR N3710 là chiếc laptop đơn giản hỗ trợ bạn công việc nhẹ nhàng và giải trí hằng ngày.\r\n\r\nCấu hình phù hợp cho công việc nhẹ nhàng\r\n\r\nMáy sử dụng chip Pentium N3710 tốc độ CPU 1.6 GHz và có thể nâng cấp lên tối đa 2.56 GHz để giúp máy vận hành hiệu quả hơn.\r\n\r\nLaptop phù hợp cho công việc văn phòng như nhập liệu hay giải trí lướt web, xem phim.\r\n\r\nMáy có RAM sẵn 4 GB và có thể nâng cấp lên tối đa 8 GB, ổ cứng HDD 500 GB để lưu trữ dữ liệu.', 3, 3),
 (19, 'Máy tính bảng Lenovo Phab 2', 3990000, 'lenovo-phab2-460-400x460.png', 'Đặc điểm nổi bật của Lenovo 2\r\n\r\n\r\nBộ sản phẩm chuẩn: Adapter, Sách hướng dẫn, Cáp chuyển, Hộp máy\r\nLenovo Phab 2 là mẫu tablet với kích thước vừa phải, phù hợp với nhiều đối tượng người dùng khác nhau.\r\n\r\nThiết kế chắc chắn\r\n\r\nLenovo Phab 2 lại có kích thước khá nặng cho người dùng cảm giác cầm nắm chắc chắn và cứng cáp. Máy được thiết kế từ nhôm, mặt lưng được bo cong về các cạnh cho máy ôm tay hơn khi sử dụng', 1, 3),
 (20, 'Máy tính bảng Lenovo Tab 3 8', 3190000, 'lenovo-tab-3-8-den-400-1-400x460-400x460.png', 'Đặc điểm nổi bật của Lenovo Tab 3 8\"\r\n\r\n\r\nTìm hiểu thêm\r\nBộ sản phẩm chuẩn: Adapter, Sách hướng dẫn, Cáp Micro USB, Hộp máy\r\nLenovo Tab 3 8 inch là chiếc máy tính bảng giá rẻ nhưng vẫn đáp ứng tốt cho người dùng nhu cầu làm việc hay giải trí cơ bản.\r\n\r\nThiết kế đơn giản\r\n\r\nLenovo Tab 3 8 inch mang trong mình thiết kế khá cơ bản cho dòng máy tính bảng giá rẻ với chất liệu nhựa bền bỉ cùng các góc cạnh bo cong mềm mại.', 1, 3),
-(22, 'Iphone X', 100000000, 'iphone-x.png', 'asdasd', 1, 1);
+(22, 'Iphone X', 100000000, 'iphone-x.png', 'asdasd', 1, 1),
+(26, 'nhom 15', 123, '', 'nhom 15', 4, 3),
+(27, 'nhom 15 edited', 123, 'Koala.jpg', 'fdds', 1, 1);
 
 -- --------------------------------------------------------
 
@@ -136,8 +138,8 @@ CREATE TABLE IF NOT EXISTS `user` (
 --
 
 INSERT INTO `user` (`id`, `name`, `password`, `email`) VALUES
-(1, 'admin', 'admin', 'tritretraux12345@gmail.com'),
-(2, 'tri', '123', 'tri@gmail.com');
+(1, 'admin', 'admin', 'dqdwadwafwa@gmail.com'),
+(2, 'tuan', '123', 'animeawfawf515');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
